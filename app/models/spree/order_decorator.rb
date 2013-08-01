@@ -19,10 +19,9 @@ module Spree
     # address
     def switch_ship_address_id
       if ship_address && ship_address.cdyne_validated
-        logger.info "In switch_ship_address_id ship_address is #{ship_address.inspect}"
         cdyne_id = self.ship_address.cdyne_address_id
         cdyne_address = Spree::Address.find(cdyne_id)
-        self.update_attribute(:ship_address_id, cdyne_id)
+        self.update_column(:ship_address_id, cdyne_address.id)
       end
     end
 

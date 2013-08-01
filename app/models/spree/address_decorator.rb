@@ -53,7 +53,7 @@ Spree::Address.class_eval do
     address.cdyne_address_id = self.id
 
     if address.save
-      self.update_attribute(:cdyne_address_id, address.id)
+      self.cdyne_address_id = address.id
     end
   end
 
