@@ -50,6 +50,7 @@ Spree::Address.class_eval do
     address.country =  Spree::Country.find_by_name(corrected_address["Country"]) || self.country
     address.phone = self.phone
     address.state = Spree::State.find_by_abbr(corrected_address["StateAbbreviation"]) || self.state
+    address.company = self.company if self.company.present?
     address.cdyne_address_id = self.id
 
     if address.save
