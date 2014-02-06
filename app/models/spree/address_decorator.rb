@@ -4,7 +4,7 @@ Spree::Address.class_eval do
 
   has_one :cdyne_address, :class_name => "Spree::Address", :foreign_key => :cdyne_address_id
 
-  validate :must_be_cdyne_valid
+  validate :must_be_cdyne_valid if !Rails.env.test?
 
   def must_be_cdyne_valid
     if is_shipping && (country.iso3 == "USA" || country.iso3 == "CAN") && cdyne_override != "1"
