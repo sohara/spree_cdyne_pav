@@ -1,6 +1,5 @@
 Spree::Address.class_eval do
   attr_accessor :cdyne_override, :is_shipping, :cdyne_invalid, :cdyne_validated
-  attr_accessible :cdyne_override, :cdyne_address_id, :is_shipping
 
   has_one :cdyne_address, :class_name => "Spree::Address", :foreign_key => :cdyne_address_id
 
