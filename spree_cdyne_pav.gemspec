@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_cdyne_pav'
-  s.version     = '1.1.2.rc1'
+  s.version     = '1.2.0.rc1'
   s.summary     = 'Spree integration with Cdyne Address Verification'
   s.description = 'Spree integration with Cdyne Address Verification, a commercial service'
   s.required_ruby_version = '>= 1.8.7'
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 2.1.0.beta'
+  s.add_dependency 'spree_core', '~> 2.2.0.beta'
   s.add_dependency 'active_record_query_trace'
 
   s.add_development_dependency 'capybara', '1.0.1'
